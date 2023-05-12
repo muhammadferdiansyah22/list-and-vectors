@@ -1,49 +1,50 @@
 #include <iostream>
 #include <vector>
+
 using namespace std;
 
-class daftar{
+class Daftar{
     private:
-        vector <string> barang;
+        vector <string> Barang;
     public:
-        daftar(){
-            barang = {"beras", "minyak goreng", "sabun"};
+        Daftar(){
+            Barang = {"Gula", "Minyak Goreng", "Kopi","Susu"};
         }
-        daftar(vector<string> barang){
-            this->barang = barang;
+        Daftar(vector<string> Barang){
+            this->Barang = Barang;
         }
-        void setBarang(vector<string> barang){
-            this->barang = barang;
+        void setBarang(vector<string> Barang){
+            this->Barang = Barang;
         }
         vector<string> getBarang(){
-            return barang;
+            return Barang;
         }
         void tambahAkhir(string nama){
-            barang.push_back(nama);
+            Barang.push_back(nama);
         }
         void hapusAkhir(){
-            barang.pop_back();
+            Barang.pop_back();
         }
         void tambahBarang(int urutan, string nama){
-            barang.insert(barang.begin() + urutan-1, nama);
+            Barang.insert(Barang.begin() + urutan-1, nama);
         }
         void hapusBarang(int urutan){
-            barang.erase(barang.begin() + urutan-1);
+            Barang.erase(Barang.begin() + urutan-1);
         }
         void daftarBaru(string* nama, int jumlah){
-            barang.assign(nama, nama + jumlah);
+            Barang.assign(nama, nama + jumlah);
         }
         void hapusDaftar(){
-            if (barang.empty() != 1){
-                barang.clear();
+            if (Barang.empty() != 1){
+                Barang.clear();
             }else{
                 cout << "Daftar sudah kosong\n";
             }
         }
         void cetakDaftar(){
             cout << "Daftar barang Aca : \n";
-            for (int i = 0; i < barang.size(); i++){
-                cout << i+1 << ". " << barang[i] << "\n";
+            for (int i = 0; i < Barang.size(); i++){
+                cout << i+1 << ". " << Barang[i] << "\n";
             }
         }
 };
