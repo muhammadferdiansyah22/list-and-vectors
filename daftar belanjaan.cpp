@@ -48,3 +48,27 @@ class Daftar{
             }
         }
 };
+
+int main(){
+    Daftar d;
+    
+    Daftar d2({"hp", "dompet"});
+    
+    d.setBarang({"baju", "celana", "kaos kaki"});
+    
+    d.tambahBarang(3, "hp");
+    
+    d.hapusBarang(2);
+    
+    string nama[] = {"hp", "dompet", "earphone"};
+    int jumlah = sizeof(nama)/sizeof(nama[0]);
+    d.daftarBaru(nama, jumlah);
+    
+    d.hapusAkhir();
+    
+    d.tambahAkhir("uang");
+    
+    d.hapusDaftar();
+    
+    d.cetakDaftar();
+}
